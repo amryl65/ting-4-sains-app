@@ -8,7 +8,7 @@ import QuizReview from './pages/QuizReview';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="app-wrapper" style={{ minHeight: '100vh', padding: '2rem 0' }}>
         <Routes>
           <Route path="/" element={<Home />} />
