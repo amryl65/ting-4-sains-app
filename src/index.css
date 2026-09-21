@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap');
+
+:root {
+  --primary: #FFD166; /* Vibrant Yellow */
+  --secondary: #EF476F; /* Vibrant Pink/Red */
+  --tertiary: #118AB2; /* Vibrant Blue */
+  --success: #06D6A0; /* Vibrant Green */
+  --bg-color: #F8F9FA;
+  --text-dark: #073B4C;
+  --border-thick: 4px solid #073B4C;
+  --shadow-hard: 6px 6px 0px #073B4C;
+  --shadow-hard-sm: 4px 4px 0px #073B4C;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-image: 
+    radial-gradient(#073b4c1a 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Comic Book Utilities */
+.comic-card {
+  background-color: white;
+  border: var(--border-thick);
+  border-radius: 12px;
+  box-shadow: var(--shadow-hard);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.comic-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px var(--text-dark);
+}
+
+.comic-card.active:active {
+  transform: translate(4px, 4px);
+  box-shadow: 2px 2px 0px var(--text-dark);
+}
+
+.comic-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 1px var(--text-dark);
+  color: white;
+  text-shadow: 3px 3px 0px var(--text-dark);
+}
+
+.comic-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--primary);
+  color: var(--text-dark);
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  border: var(--border-thick);
+  border-radius: 8px;
+  box-shadow: var(--shadow-hard-sm);
+  cursor: pointer;
+  transition: all 0.1s;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.comic-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--text-dark);
+}
+
+.comic-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--text-dark);
+}
+
+.comic-button.secondary {
+  background-color: var(--secondary);
+  color: white;
+  -webkit-text-stroke: 1px var(--text-dark);
+}
+
+.comic-button.tertiary {
+  background-color: var(--tertiary);
+  color: white;
+  -webkit-text-stroke: 1px var(--text-dark);
+}
+
+.comic-button.success {
+  background-color: var(--success);
+  color: white;
+  -webkit-text-stroke: 1px var(--text-dark);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mt-4 { margin-top: 1rem; }
+.mt-8 { margin-top: 2rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+.text-center { text-align: center; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border-left: 2px solid var(--text-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 2px solid var(--text-dark);
+  border-radius: 6px;
+}
