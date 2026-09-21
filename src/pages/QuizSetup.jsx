@@ -22,15 +22,17 @@ export default function QuizSetup() {
 
         <div className="mb-8">
           <h3 className="mb-4">Pilih Bab:</h3>
-          <div className="flex-center" style={{ gap: '1rem' }}>
-            {[1, 2, 3].map(chap => (
+          <div className="flex-center" style={{ gap: '1rem', flexWrap: 'wrap' }}>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(chap => (
               <button
                 key={chap}
                 onClick={() => setSelectedChapter(chap)}
                 className="comic-button"
                 style={{
                   backgroundColor: selectedChapter === chap ? 'var(--primary)' : 'white',
-                  color: 'var(--text-dark)'
+                  color: 'var(--text-dark)',
+                  flex: '1 0 20%',
+                  minWidth: '100px'
                 }}
               >
                 Bab {chap}

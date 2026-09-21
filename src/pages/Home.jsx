@@ -31,7 +31,7 @@ export default function Home() {
         <div className="comic-card">
           <BookOpen size={48} className="mb-4" color="var(--tertiary)" />
           <h2 className="comic-title mb-4" style={{ color: 'var(--tertiary)', WebkitTextStroke: '0px' }}>Nota Padat</h2>
-          <p className="mb-4">Ulang kaji topik-topik penting Bab 1 hingga Bab 3 dengan nota dan video tutorial.</p>
+          <p className="mb-4">Ulang kaji topik-topik penting Bab 1 hingga Bab 12 dengan nota dan video tutorial.</p>
           <Link to="/notes" className="comic-button tertiary">Buka Nota</Link>
         </div>
 
